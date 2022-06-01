@@ -1,0 +1,116 @@
+ 1. Создать внешний репозиторий c названием XML
+ GitHub > Repos -> New -> XML
+
+ 5. Клонировать репозиторий JSON на локальный компьютер:
+ git clone github.com/elvyudina/XML.git
+
+ 6. Внутри локального JSON создать файл “new.xml”:
+ touch new.xml
+
+ 
+ 7. Добавить файл под гит:
+ git add new.xml
+
+ 8. Закоммитить файл:
+ git commit -m "new file"
+
+ 9. Отправить файл на внешний GitHub репозиторий:
+ git push
+
+ 10. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных,). Всё написать в формате JSON:
+  vim new.xml
+  Нажимаем i,для редактирования файла
+
+ <?xml version="1.0" encoding="UTF-8"?>
+<human>
+ <name> Фамилия имя отчество:Юдина Елена Викторовна </name>
+ <age> Возраст:37 </age> 
+ <pets>Количество домашних животных: 1 </pets>
+ <salary>Будущая желаемая зарплата:30000 </salary>
+</human>
+ нажимаем Esc, :wq
+
+ 11. Отправить изменения на внешний репозиторий:
+ git commit -am "added information about yourself"
+ git status
+ git push
+
+ 12. Создать файл preferences.xml
+ touch preferences.xml
+
+ 13. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON:
+ vim preferences.xml
+ Нажимаем i,для редактирования файла
+  <?xml version="1.0" encoding="UTF-8"?>
+<human>
+ <movie> Любимый фильм: Приведение </movie>
+ <TV_series> Любимый сериал: Воронины </TV_series>
+ <food>Любимая еда: манты </food>
+ <season>Любимое время года:лето</season>
+ <country>Страна которую хочу посетить: Франция" </country>
+ </human>
+ нажимаем Esc, :wq
+
+ 14. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате xml
+ touch skills.xml
+ vim skills.xml
+
+ <?xml version="1.0" encoding="UTF-8"?>
+ <human>
+ <skills>Навыки:
+ 1.Базовая теория  :тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.
+ 2.Клиент-серверная архитектура":"HTTP Методы запросов на сервер, структуры HTTP запросов и ответов,JSON, XML их структура
+ 3.Тестирование API":"Postman (JS, автотесты API)
+ 4.Cнятие и чтение логов c внешнего сервера
+ 5.Снифинг http web трафика через Charles и Fiddler10
+ 6.Dev Tools веб браузеров Браузер Google Chrome и FireFox
+ 7.VPN. Как работает, зачем нужен, как использовать
+ 8.Мобильное тестирование.Особенность iOS, Android, гайдлайны. Сборка Android приложений на Android Studio. ADB (управление андройд девайсами). Настройка прокси и vpn на iOS и Android
+ 9.Перехват (сниффинг) мобильного трафика. Charles и Fiddler на iOS и Android
+ 10.Командная строка (terminal) Linux. Копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса
+ 11.Основы bash. Скриптинг, автоматизация рутинных задач на сервере
+ 12.Доступ к удалённым серверам
+ 13.Основы SQL. Create, Delete, Drop, Insert Into, Select, From, Where, Join
+ 14.База данных Postgres. Установка, настройка и использование
+ 15.Нагрузочное тестирование Jmeter </skills>
+  </human>
+ нажимаем Esc, :wq
+ 
+ 15. Отправить сразу 2 файла на внешний репозиторий:
+ git commit -am"add information about preferences and skills"
+ git push
+
+ 16. На веб интерфейсе создать файл bug_report.xml
+ GitHub->Add file->create file bug_report.xml
+
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе:
+  Commit changes, GitBash : git fetch->git pull
+
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+ GitHub-> bug_report.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<bug>
+ <bug_report> bug_report
+  Bug_id: 21
+  Title: When changing the desktop grid from 4x6 to 5x6, the widget is not displayed
+  Severity: major
+  Priority: high"
+  Environment:1)Redmi Note 7, MIUI Global 12.5.3
+              2) Realme 8 Pro, Android 11, RMX3081_11_A.47
+              3) Realme C21 (UI 2.0) Android 11 RMX3201_11_C.09
+   Precondition: Add one widget
+   Steps_to_reproduce:1) Open the "Android grit test" app
+                      2) Click on the button “ADD WIDGET”
+                      3) Stretch Widget
+                      4) Go to phone settings - desktop - desktop grid - change desktop grid from 4x6 to 5x6"
+    Actual Result: Widget not showing when using desktop grid from 4x6 to 5x6
+    Expected Result: When changing the desktop grid, the widget should take the form according to the specified parameters
+    Attachments: https://drive.google.com/file/d/10mCNcDhRIvdW1vpPBPJhMDnD43CgUaUe/view?usp=sharing
+              </bug_report> 
+ </bug>
+
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе:
+ Commit changes"Add bug_report "
+
+ 20. Синхронизировать внешний и локальный репозиторий XML:
+  GitBash : git status ->git fetch->git pull
