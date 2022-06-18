@@ -1,10 +1,11 @@
  1. Создать внешний репозиторий c названием XML
- GitHub > Repos -> New -> XML
+ GitHub > Repositories -> New -> XML
 
- 5. Клонировать репозиторий JSON на локальный компьютер:
+ 5. Клонировать репозиторий XML на локальный компьютер:
  git clone github.com/elvyudina/XML.git
 
- 6. Внутри локального JSON создать файл “new.xml”:
+ 6. Внутри локального XML создать файл “new.xml”:
+ cd XML
  touch new.xml
 
  
@@ -77,7 +78,8 @@
  нажимаем Esc, :wq
  
  15. Отправить сразу 2 файла на внешний репозиторий:
- git commit -am"add information about preferences and skills"
+ git add . 
+ git commit -m"add information about preferences and skills"
  git push
 
  16. На веб интерфейсе создать файл bug_report.xml
